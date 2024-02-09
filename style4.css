@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #526D82, #27374D);
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.logo:hover{
+    color: #fff;
+    }
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 35px;
+    transition: .3s;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+/**************CARD***************/
+
+.container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+    float: left;
+ }
+  
+  .container:first-child {
+    margin-right: 50px;
+  }
+
+  .container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    height: 510px;
+    width: 350px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    margin-top: 300px;
+    margin-left: 550px;
+    cursor: pointer;
+  }
+
+  .container:hover > .card1{
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+
+  .card1 {
+    height: 510px;
+    width: 350px;
+    position: absolute;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    margin-top: 300px;
+    margin-left: 650px;
+  }
+
+  .container:hover > .card2{
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-image: url(Resimler/e728acbeff50d4e787bf6c4c11583edd.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .front1,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front1 {
+    background-image: url(Resimler/b640cd1f552f1ac9954907ae4b85fe49.jpg);
+    background-position: center;
+    background-size: cover;
+    
+  }
+  
+  .back  {
+    background-color: #000000;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  span {
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  p{
+    margin-left: 10px;
+    margin-top: 300px;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  }
+
+  /**************KEYFRAMES ANİMATİON****************/
+
+
+  @keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+   }   
+
+   @keyframes slideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+   }   
+
+   @keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+   }   
+
+   @keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-24px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
