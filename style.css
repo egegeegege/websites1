@@ -17,13 +17,39 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     padding: 20px 10%;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
+}
+
+header nav{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+header nav a::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    width: 0%;
+    height: 2.5px;
+    transition: .3s;
+}
+header nav a:hover::before{
+    width: 100%;
 }
 
 .logo{

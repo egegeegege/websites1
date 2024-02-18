@@ -34,7 +34,31 @@ nav {
     z-index: 100;
 }
 
-
+header ul{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+}
+header ul a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+header ul a::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    width: 0%;
+    height: 2.5px;
+    transition: .3s;
+}
+header ul a:hover::before{
+    width: 100%;
+}
 
 .logo {
     font-size: 25px;

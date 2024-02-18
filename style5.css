@@ -11,15 +11,42 @@ svg{
 header{
     width: 1200px;
     max-width: 90%;
-    margin-left: 480px;
+    margin-left: 880px;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 50px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 100;
 }
+
+header ul{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+}
+header ul a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+header ul a::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    width: 0%;
+    height: 2.5px;
+    transition: .3s;
+}
+header ul a:hover::before{
+    width: 100%;
+}
+
 .logo{
     font-size: 25px;
     color: #fff;
@@ -28,6 +55,7 @@ header{
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+    margin-right: 500px;
 }
 header .menu{
     padding: 0;
@@ -49,6 +77,10 @@ a {
     margin: 35px;
     margin-top: 130px;
     transition: .3s;
+}
+a:hover,
+a.active{
+    color: rgb(77, 149, 243);
 }
 
 /* css slider */
