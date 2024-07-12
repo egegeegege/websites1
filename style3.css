@@ -165,6 +165,7 @@ a:hover,
     animation: zoomIn 1s ease forwards;
     animation-delay: 1s;
     border-radius: 10px;
+    transition: .5s ease;
 }
 .eko:hover {
     box-shadow: 0 0 20px rgb(10, 18, 27);

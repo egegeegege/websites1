@@ -129,6 +129,7 @@ header nav a:hover::before{
 .home-img img{
     max-width: 450px;
     margin-right: -20px;
+    box-shadow: 0 0 20px rgb(17, 29, 44);
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s
      ease-in-out infinite;
